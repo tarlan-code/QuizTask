@@ -1,0 +1,107 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\admin\assets\**" />
+    <Content Remove="wwwroot\admin\assets\**" />
+    <EmbeddedResource Remove="wwwroot\admin\assets\**" />
+    <None Remove="wwwroot\admin\assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Manage\Data\" />
+    <Folder Include="Areas\Manage\Models\" />
+    <Folder Include="wwwroot\admin\" />
+    <Folder Include="wwwroot\assets\img\product\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\vendor\contact-mailer.php" />
+    <None Include="wwwroot\assets\vendor\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\vendor\fonts\fa-brands-400.svg" />
+    <None Include="wwwroot\assets\vendor\fonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\assets\vendor\fonts\fa-regular-400.svg" />
+    <None Include="wwwroot\assets\vendor\fonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\assets\vendor\fonts\fa-solid-900.svg" />
+    <None Include="wwwroot\assets\vendor\fonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\assets\vendor\fonts\la-brands-400.svg" />
+    <None Include="wwwroot\assets\vendor\fonts\la-brands-400.woff2" />
+    <None Include="wwwroot\assets\vendor\fonts\la-regular-400.svg" />
+    <None Include="wwwroot\assets\vendor\fonts\la-regular-400.woff2" />
+    <None Include="wwwroot\assets\vendor\fonts\la-solid-900.svg" />
+    <None Include="wwwroot\assets\vendor\fonts\la-solid-900.woff2" />
+    <None Include="wwwroot\assets\vendor\fonts\LineIcons.svg" />
+    <None Include="wwwroot\assets\vendor\fonts\revicons.svg" />
+    <None Include="wwwroot\assets\vendor\fonts\slick.svg" />
+    <None Include="wwwroot\assets\vendor\img\elements-img\footer-img\footer-svg.svg" />
+    <None Include="wwwroot\assets\vendor\img\elements-img\info-img\ui-block-29.svg" />
+    <None Include="wwwroot\assets\vendor\img\mejs-controls.svg" />
+    <None Include="wwwroot\assets\vendor\js\bootstrap-input-spinner.js" />
+    <None Include="wwwroot\assets\vendor\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\assets\vendor\js\bundle.min.js" />
+    <None Include="wwwroot\assets\vendor\js\circle-progress.min.js" />
+    <None Include="wwwroot\assets\vendor\js\contact_us.js" />
+    <None Include="wwwroot\assets\vendor\js\date.js" />
+    <None Include="wwwroot\assets\vendor\js\Drift.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.addon.snow.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.actions.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.beforeafter.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.carousel.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.kenburn.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.layeranimation.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.migration.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.navigation.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.parallax.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.slideanims.min.js" />
+    <None Include="wwwroot\assets\vendor\js\extensions\revolution.extension.video.min.js" />
+    <None Include="wwwroot\assets\vendor\js\flip.js" />
+    <None Include="wwwroot\assets\vendor\js\hover-item.js" />
+    <None Include="wwwroot\assets\vendor\js\isotope.pkgd.min.js" />
+    <None Include="wwwroot\assets\vendor\js\jquery-countTo.js" />
+    <None Include="wwwroot\assets\vendor\js\jquery-ui.bundle.js" />
+    <None Include="wwwroot\assets\vendor\js\jquery.appear.js" />
+    <None Include="wwwroot\assets\vendor\js\jquery.cubeportfolio.min.js" />
+    <None Include="wwwroot\assets\vendor\js\jquery.fancybox.min.js" />
+    <None Include="wwwroot\assets\vendor\js\jquery.hoverdir.js" />
+    <None Include="wwwroot\assets\vendor\js\jquery.themepunch.revolution.min.js" />
+    <None Include="wwwroot\assets\vendor\js\jquery.themepunch.tools.min.js" />
+    <None Include="wwwroot\assets\vendor\js\mediaelement-and-player.min.js" />
+    <None Include="wwwroot\assets\vendor\js\megamenu.js" />
+    <None Include="wwwroot\assets\vendor\js\modernizr.custom.97074.js" />
+    <None Include="wwwroot\assets\vendor\js\morphext.min.js" />
+    <None Include="wwwroot\assets\vendor\js\owl.carousel.min.js" />
+    <None Include="wwwroot\assets\vendor\js\parallaxie.min.js" />
+    <None Include="wwwroot\assets\vendor\js\particles.min.js" />
+    <None Include="wwwroot\assets\vendor\js\select2.min.js" />
+    <None Include="wwwroot\assets\vendor\js\slick.min.js" />
+    <None Include="wwwroot\assets\vendor\js\stickyfill.min.js" />
+    <None Include="wwwroot\assets\vendor\js\swiper.min.js" />
+    <None Include="wwwroot\assets\vendor\js\swiper.min.js.map" />
+    <None Include="wwwroot\assets\vendor\js\tilt.jquery.min.js" />
+    <None Include="wwwroot\assets\vendor\js\tooltipster.min.js" />
+    <None Include="wwwroot\assets\vendor\js\TweenMax.min.js" />
+    <None Include="wwwroot\assets\vendor\js\wow.js" />
+    <None Include="wwwroot\assets\vendor\js\wow.min.js" />
+    <None Include="wwwroot\assets\vendor\PHPMailer\Exception.php" />
+    <None Include="wwwroot\assets\vendor\PHPMailer\OAuth.php" />
+    <None Include="wwwroot\assets\vendor\PHPMailer\PHPMailer.php" />
+    <None Include="wwwroot\assets\vendor\PHPMailer\POP3.php" />
+    <None Include="wwwroot\assets\vendor\PHPMailer\SMTP.php" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+  </ItemGroup>
+
+</Project>

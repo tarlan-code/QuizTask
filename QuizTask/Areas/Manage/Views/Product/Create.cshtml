@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewData["Title"] = "product Create";
+}
+
+@model CreateProductVM
+<!-- // Basic multiple Column Form section start -->
+<section id="multiple-column-form">
+    <div class="row match-height">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Create Category</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label asp-for="Name"></label>
+                                        <input asp-for="Name" class="form-control"
+                                               placeholder="Name">
+                                        <span asp-validation-for="Name"></span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label asp-for="Desc"></label>
+                                        <textarea asp-for="Desc" class="form-control"></textarea>
+                                        <span asp-validation-for="Desc"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4 col-12">
+                                    <div class="form-group">
+                                        <label asp-for="CostPrice">Cost Price</label>
+                                        <input asp-for="CostPrice" class="form-control"
+                                               placeholder="Cost Price">
+                                        <span asp-validation-for="CostPrice"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12">
+                                   <div class="form-group">
+                                        <label asp-for="SellPrice">Sell Price</label>
+                                        <input asp-for="SellPrice" class="form-control"
+                                               placeholder="Sell Price">
+                                        <span asp-validation-for="SellPrice"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12">
+                                   <div class="form-group">
+                                        <label asp-for="Discount"></label>
+                                        <input asp-for="Discount" class="form-control"
+                                               placeholder="Discount">
+                                        <span asp-validation-for="Discount"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-12">
+                                    <div class="form-group">
+                                        <label asp-for="CoverImage">Cover Image</label>
+                                        <input asp-for="CoverImage" accept="image/*" class="form-control">
+                                        <span asp-validation-for="CoverImage"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12">
+                                   <div class="form-group">
+                                        <label asp-for="OtherImages">Other Images</label>
+                                        <input asp-for="OtherImages" accept="image/*" class="form-control">
+                                        <span asp-validation-for="OtherImages"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12">
+                                   <div class="form-group">
+                                        <label asp-for="CategoryIds">Categories</label>
+                                        <select class="choices form-select multiple-remove choices__inpu" asp-for="CategoryIds" asp-items="@ViewBag.Categories"></select>
+                                        <span asp-validation-for="CategoryIds"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-success me-1 mb-1">Submit</button>
+                                    <button asp-controller="Product" asp-action="Index" class="btn btn-light-danger me-1 mb-1">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Basic multiple Column Form section end -->
+

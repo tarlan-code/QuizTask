@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "ICategories";
+}
+
+@model IEnumerable<Category>
+<!-- Basic Tables start -->
+<section class="section">
+    <div class="row" id="basic-table">
+        <div class="col-12 col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Categories</h4>
+                    <a class="btn btn-success" asp-area="Manage" asp-controller="Category" asp-action="Create">Add</a>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <!-- Table with outer spacing -->
+                        <div class="table-responsive">
+                            <table class="table table-lg">
+                                <thead>
+                                    <tr>
+                                        <th>DB Id</th>
+                                        <th>Name</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach(Category cat in Model){
+
+                                        <tr>
+                                            <td>@cat.Id</td>
+                                            <td class="text-bold-500">@cat.Name</td>
+                                            <td>
+                                                <label>
+                                                        @(cat.IsActive ? "Active" : "Inactive")
+                                                </label>
+                                                <a class="btn btn-warning ms-2" asp-area="Manage" asp-controller="Category" asp-action="ChangeStatus" asp-route-id="@cat.Id">Change</a>
+                                            </td>
+                                            <td><a class="btn btn-warning" asp-area="Manage" asp-controller="Category" asp-action="Update" asp-route-id="@cat.Id">Update</a></td>
+                                            <td><a class="btn btn-danger" asp-area="Manage" asp-controller="Category" asp-action="Delete" asp-route-id="@cat.Id">Delete</a></td>
+                                        </tr>
+                                    }
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Basic Tables end -->
+

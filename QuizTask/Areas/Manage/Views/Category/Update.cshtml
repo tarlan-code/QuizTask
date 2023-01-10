@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Category Update";
+}
+
+
+@model Category
+<!-- // Basic multiple Column Form section start -->
+<section id="multiple-column-form">
+    <div class="row match-height">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Update Category</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form" method="post">
+                            <div class="row">
+                                <div class="col-md-12 col-12">
+                                    <div class="form-group">
+                                        <label asp-for="Name"></label>
+                                        <input asp-for="Name" class="form-control"
+                                               placeholder="Name">
+                                        <span asp-validation-for="Name"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-success me-1 mb-1">Update</button>
+                                    <button asp-controller="Category" asp-action="Index" class="btn btn-light-danger me-1 mb-1">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Basic multiple Column Form section end -->
+
