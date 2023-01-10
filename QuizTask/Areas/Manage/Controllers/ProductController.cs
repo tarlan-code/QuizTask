@@ -163,45 +163,10 @@ namespace QuizTask.Areas.Manage.Controllers
         }
 
 
-        public IActionResult Update(int? Id,CreateProductVM prod)
+        [HttpPost]
+        public IActionResult Update(int? Id,UpdateProductVM prod)
         {
             if (Id is null || Id <= 0) return BadRequest();
-
-            var coverImg = prod?.CoverImage;
-            var otherImgs = prod?.OtherImages;
-
-
-            string result = coverImg?.CheckValidate("image/", 300);
-
-            if (result?.Length > 0)
-            {
-                ModelState.AddModelError("CoverImage", result);
-            }
-
-            if (otherImgs is not null)
-            {
-                foreach (IFormFile file in otherImgs)
-                {
-                    result = file?.CheckValidate("image/", 300);
-                    if (result?.Length > 0)
-                    {
-                        ModelState.AddModelError("OtherImages", "Something wrong");
-                    }
-                }
-            }
-
-            if (prod.CategoryIds is not null)
-            {
-                foreach (int CatId in prod.CategoryIds)
-                {
-                    if (!_context.Categories.Any(c => c.Id == CatId))
-                    {
-                        ModelState.AddModelError("CategryIds", "Categories are not entered correctly");
-                        break;
-                    }
-                }
-            }
-
 
 
             if (!ModelState.IsValid)
@@ -221,6 +186,7 @@ namespace QuizTask.Areas.Manage.Controllers
             exist.CostPrice = prod.CostPrice;
             exist.SellPrice = prod.SellPrice;
             exist.Desc = prod.Desc;
+            
 
             foreach (var item in _context.ProductCategories.Where(pc => pc.ProductId == exist.Id))
             {

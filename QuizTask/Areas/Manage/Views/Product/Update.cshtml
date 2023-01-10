@@ -1,16 +1,18 @@
 ﻿
 @{
-    ViewData["Title"] = "product Create";
+    ViewData["Title"] = "Update";
 }
 
-@model CreateProductVM
+
+
+@model UpdateProductVM
 <!-- // Basic multiple Column Form section start -->
 <section id="multiple-column-form">
     <div class="row match-height">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Create Product</h4>
+                    <h4 class="card-title">Update Product</h4>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
@@ -23,7 +25,7 @@
                                                placeholder="Name">
                                         <span asp-validation-for="Name"></span>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
@@ -43,7 +45,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-12">
-                                   <div class="form-group">
+                                    <div class="form-group">
                                         <label asp-for="SellPrice">Sell Price</label>
                                         <input asp-for="SellPrice" class="form-control"
                                                placeholder="Sell Price">
@@ -51,30 +53,16 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-12">
-                                   <div class="form-group">
+                                    <div class="form-group">
                                         <label asp-for="Discount"></label>
                                         <input asp-for="Discount" class="form-control"
                                                placeholder="Discount">
                                         <span asp-validation-for="Discount"></span>
                                     </div>
                                 </div>
-
+                                
                                 <div class="col-md-4 col-12">
                                     <div class="form-group">
-                                        <label asp-for="CoverImage">Cover Image</label>
-                                        <input asp-for="CoverImage" accept="image/*" class="form-control">
-                                        <span asp-validation-for="CoverImage"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-12">
-                                   <div class="form-group">
-                                        <label asp-for="OtherImages">Other Images</label>
-                                        <input asp-for="OtherImages" accept="image/*" class="form-control">
-                                        <span asp-validation-for="OtherImages"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-12">
-                                   <div class="form-group">
                                         <label asp-for="CategoryIds">Categories</label>
                                         <select class="choices form-select multiple-remove choices__inpu" asp-for="CategoryIds" asp-items="@ViewBag.Categories"></select>
                                         <span asp-validation-for="CategoryIds"></span>
@@ -95,4 +83,3 @@
     </div>
 </section>
 <!-- // Basic multiple Column Form section end -->
-

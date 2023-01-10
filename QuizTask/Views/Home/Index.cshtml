@@ -119,8 +119,10 @@
                             <i class="fa fa-shopping-cart"></i>
                         </a>
                         <div class="cbp-caption-defaultWrap  owl-theme sync-portfolio-carousel owl-carousel">
-                            @foreach (ProductImage image in pro.ProductImages)
-                            {
+                                    <div class="item"> <a href="~/assets/img/product/@(pro?.ProductImages.FirstOrDefault(pi => pi.IsCover == true).ImgUrl)" class="cbp-caption" data-fancybox="gallery1" data-title="Book 1"><img src="~/assets/img/product/@(pro?.ProductImages.FirstOrDefault(pi => pi.IsCover == true).ImgUrl)" alt="Book 1"></a></div>
+                                  
+                                    @foreach (ProductImage image in pro.ProductImages.Where(pi => pi.IsCover == false))
+                                    {
                                 <div class="item"> <a href="~/assets/img/product/@image.ImgUrl" class="cbp-caption" data-fancybox="gallery1" data-title="Book 1"><img src="~/assets/img/product/@image.ImgUrl" alt="Book 1"></a></div>
                                 
                             }
